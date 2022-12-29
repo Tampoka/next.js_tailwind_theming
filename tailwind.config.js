@@ -1,3 +1,5 @@
+const themes = require("./src/Themes/index");
+
 module.exports = {
     content: ["{pages,src}/**/*.{js,ts,jsx,tsx}"],
     darkMode: "class",
@@ -5,6 +7,6 @@ module.exports = {
     theme: ["dark"],
     plugins: [require("daisyui")],
     daisyui: {
-        themes: [],
+        themes: [{...themes}],
     },
 }
