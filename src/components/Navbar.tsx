@@ -2,6 +2,7 @@ import React, { useContext} from "react";
 import { ThemeContext } from "../Themes/themeContext";
 import * as Themes from "../Themes/index";
 import Link from "next/link";
+
 const Navbar = () => {
     const { setTheme } = useContext(ThemeContext);
     return (
@@ -29,12 +30,12 @@ const Navbar = () => {
                         className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52"
                     >
                         <li>
-                            <Link href="/">
+                            <Link legacyBehavior href="/">
                                 <a>Homepage</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/login"}>
+                            <Link legacyBehavior href={"/login"}>
                                 <a>Login</a>
                             </Link>
                         </li>
