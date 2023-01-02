@@ -1,6 +1,17 @@
-import type {NextPage} from "next";
+import type {NextPage,GetStaticProps} from "next";
+import { Namespace } from 'react-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import nextI18NextConfig from '@/../next-i18next.config.js';
 import Head from "next/head";
 import {Button} from "../src/components/atom/Button/Button";
+
+const i18nextNameSpaces: Namespace[] = ['navbar','seo', 'common', 'login', 'about'];
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+    // 必要なリソースをロードし、propsとして受け渡す
+    const translation = await serverSideTranslations(locale!, i18nextNameSpaces as string[], nextI18NextConfig);
+    return { props: { ...translation} };
+};
 
 const Home: NextPage = () => {
     return (
