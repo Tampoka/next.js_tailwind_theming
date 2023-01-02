@@ -1,9 +1,7 @@
-import Navbar from "../../src/components/Navbar";
 
 const Index = () => {
     return (
         <div>
-            <Navbar />
             <section>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">

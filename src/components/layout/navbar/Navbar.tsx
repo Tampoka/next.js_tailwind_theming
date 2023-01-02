@@ -1,6 +1,6 @@
 import React, { useContext} from "react";
-import { ThemeContext } from "../Themes/themeContext";
-import * as Themes from "../Themes/index";
+import { ThemeContext } from "../../../Themes/themeContext";
+import * as Themes from "../../../Themes";
 import Link from "next/link";
 
 const Navbar = () => {
