@@ -1,10 +1,12 @@
 import React, { useContext} from "react";
-import { ThemeContext } from "../../../Themes/themeContext";
+import { ThemeContext } from "@/Themes/themeContext";
 import * as Themes from "../../../Themes";
 import Link from "next/link";
+import {useTranslation} from "next-i18next";
 
 const Navbar = () => {
     const { setTheme } = useContext(ThemeContext);
+    const {t}=useTranslation('navbar');
     return (
         <div className="navbar bg-base-200">
             <div className="navbar-start">
@@ -31,16 +33,16 @@ const Navbar = () => {
                     >
                         <li>
                             <Link legacyBehavior href="/">
-                                <a>Homepage</a>
+                                <a>{t('nav.homepage')}</a>
                             </Link>
                         </li>
                         <li>
                             <Link legacyBehavior href={"/login"}>
-                                <a>Login</a>
+                                <a>{t('nav.login')}</a>
                             </Link>
                         </li>
                         <li>
-                            <a>About</a>
+                            <a>{t('nav.about')}</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +78,8 @@ const Navbar = () => {
                         {Object.keys(Themes).map((key) => {
                             return (
                                 <li key={key} onClick={() => setTheme(key)}>
-                                    <a className="capitalize">{key}</a>
+                                    {/*<a className="capitalize">{key}</a>*/}
+                                    <a>{t(`themes.${key}`)}</a>
                                 </li>
                             );
                         })}
