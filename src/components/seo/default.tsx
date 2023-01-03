@@ -11,7 +11,7 @@ const ogImageWidth = 1200;
 const ogImageHeight = 630;
 
 /** Twitterスクリーンネーム */
-const twitterScreenName = `@${process.env.NEXT_PUBLIC_TWITTER_SCREEN_NAME ?? 'azurdiary'}`;
+const twitterScreenName = `@${process.env.NEXT_PUBLIC_TWITTER_SCREEN_NAME ?? '******'}`;
 
 /** Twitter SEO設定 */
 const twitter: DefaultSeoProps['twitter'] = twitterScreenName
