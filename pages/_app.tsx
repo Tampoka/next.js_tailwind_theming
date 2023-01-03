@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type {AppProps} from "next/app";
-import {ThemeContextProvider} from "../src/Themes/themeContext";
+import {ThemeContextProvider} from "@/Themes/themeContext";
 import Layout from "../src/components/layout/layout";
 import { appWithTranslation } from 'next-i18next';
 

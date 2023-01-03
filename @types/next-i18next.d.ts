@@ -14,6 +14,11 @@ declare module 'react-i18next' {
             login: typeof login;
             'navbar': typeof navbar;
             'about': typeof about;
-        };
+        },
+        fallbackLng: 'en',
+        // keySeparator: false, // this was the line that I've had to remove to make it work
+        interpolation: {
+            escapeValue: false,
+        }
     }
 }
