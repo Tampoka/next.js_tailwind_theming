@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "homepage": "ホームページ",
+    "login": "ログイン",
+    "about": "アバウト"
+  },
+  "themes": {
+    "default": "デフォルト",
+    "luxury": "ラグジュアリー",
+    "dark": "ダーク",
+    "cupcake": "カップケーキ"
+  }
+}

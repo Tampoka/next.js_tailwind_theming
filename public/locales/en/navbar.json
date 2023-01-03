@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "homepage": "Homepage",
+    "login": "Login",
+    "about": "About"
+  },
+  "themes": {
+    "default": "Default",
+    "luxury": "Luxury",
+    "dark": "Dark",
+    "cupcake": "Cupcake"
+  }
+}
